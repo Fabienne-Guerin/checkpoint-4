@@ -1,14 +1,6 @@
-import Home from "@pages/Home";
-
-import "./App.css";
-
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <Home />
-      <p>coucou</p>
-    </div>
-  );
-}
-
-export default App;
+    <h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>
+  )
