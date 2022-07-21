@@ -9,6 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #efebce;
 }
 
 code {
@@ -87,12 +88,12 @@ button {
   justify-content: space-evenly;
   align-items: center;
   display: flex;
-  background-color: white;
+  background-color: #0c4246;
   margin: 0.5rem 0rem;
-  color: #f7f7ff;
+  color: #1c0f13;
 }
 .menuWrapper li {
-  color: #0c4246;
+  color: #efebce;
   padding: 1rem 2rem;
   position: relative;
   text-decoration: none;
