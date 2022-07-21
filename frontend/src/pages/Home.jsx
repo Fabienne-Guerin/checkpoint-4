@@ -1,7 +1,9 @@
+import React from "react";
+
 export default function Home() {
   return (
     <div>
-      <p className="text-teal-200">Hello Vite + React !</p>
+      <p>This is a home page</p>
     </div>
   );
 }

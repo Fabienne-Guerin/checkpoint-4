@@ -11,7 +11,6 @@ export default function Menu() {
           <h3>Nos boissons</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum in quis totam doloremque!</p>
         </div>
-        
       </div>
 
     </div>
