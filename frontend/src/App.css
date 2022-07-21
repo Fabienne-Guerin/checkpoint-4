@@ -9,7 +9,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #efebce;
 }
 
 code {
@@ -59,7 +58,6 @@ code {
 button {
   font-size: calc(10px + 2vmin);
 }
-
 .logo-footer {
   width: 30px;
   height: 30px;
@@ -73,6 +71,7 @@ button {
   justify-content: center;
   align-items: center;
   min-height: 6px;
+  background-color: white;
 }
 .logo {
   width: 150px;
@@ -84,16 +83,22 @@ button {
 }
 
 .menuWrapper ul {
-  width: 80vw;
+  width: 100vw;
   justify-content: space-evenly;
   align-items: center;
   display: flex;
+<<<<<<< HEAD
   background-color: #0c4246;
-  margin: 0.5rem 0rem;
+  margin: 0rem;
   color: #1c0f13;
+=======
+  background-color: white;
+  margin: 0.5rem 0rem;
+  color: #f7f7ff;
+>>>>>>> 276bb4f869d97f4126c36e4952e29ee6ae008c1f
 }
 .menuWrapper li {
-  color: #efebce;
+  color: #0c4246;
   padding: 1rem 2rem;
   position: relative;
   text-decoration: none;

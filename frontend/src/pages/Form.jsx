@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Menu() {
+export default function Form() {
   return (
     <div>
-      <p>This is menu page</p>
+      <contactForm />
     </div>
   );
 }
