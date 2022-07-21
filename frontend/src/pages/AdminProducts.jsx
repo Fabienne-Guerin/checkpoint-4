@@ -21,22 +21,20 @@ export default function AdminProducts() {
       <h1 className="text-center">Voici la liste des produits à la carte</h1>
       <div className="flex flex-row">
         <div>
-            {Products &&
-            Products.map(
-                (product) => {
-                  return (
-                    <ProductDetail
-                      name={product.name}
-                      description={product.description}
-                      price={product.price}
-                      id={product.id}
-                      key={product.id}
-                    />
-                  );
-                }
-              )}
+          {Products &&
+            Products.map((product) => {
+              return (
+                <ProductDetail
+                  name={product.name}
+                  description={product.description}
+                  price={product.price}
+                  id={product.id}
+                  key={product.id}
+                />
+              );
+            })}
         </div>
       </div>
     </div>
-    );
+  );
 }
