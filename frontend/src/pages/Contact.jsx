@@ -20,10 +20,12 @@ export default function Contact() {
         </div>
       </div>
       <div className="flex flex-col">
-        <h3 className="text-center ">Une question? Une remarque? N'hésitez pas à nous contacter!</h3>
+        <h3 className="text-center ">
+          Une question? Une remarque? N'hésitez pas à nous contacter!
+        </h3>
         <Link to="/Form">
           <div className="bg-teal-900 text-white text-center font-bold py-4 px-4 mb-6 rounded-full hover:bg-teal-500 mt-4 w-2/3">
-            <button>Nous envoyer un message</button>
+            <button type="button">Nous envoyer un message</button>
           </div>
         </Link>
       </div>
