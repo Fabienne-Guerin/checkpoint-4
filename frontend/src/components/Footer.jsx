@@ -22,28 +22,9 @@ export default function Footer() {
         </nav>
         <p>Created by Sweets and Coffee © 2022</p>
       </div>
-      <div className="flex-1">
-        <div>
-          <p>12 boulevard de l'arabica, </p>
-          <p>69004 Lyon, France</p>
-        </div>
-        <div>
-          <p>07 77 07 77 07</p>
-          <p>du lundi au vendredi de 10h à 19h</p>
-        </div>
-        <div>
-          <p>contact@sweets and Coffee</p>
-        </div>
-        <img
-          className="w-9 h-9 circle bg-teal-900"
-          src={fb}
-          alt="facebook logo"
-        />
-        <img
-          className="w-9 h-9 circle bg-teal-900"
-          src={instagram}
-          alt="instagram logo"
-        />
+      <div className="flex flex-row">
+        <img className="w-9 h-9" src={fb} alt="facebook" />
+        <img className="w-9 h-9" src={instagram} alt="instagram" />
       </div>
     </div>
   );
