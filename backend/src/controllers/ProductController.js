@@ -37,8 +37,7 @@ class ProductController {
     product.id = parseInt(req.params.id, 10);
 
     models.product
-      .update(product
-)
+      .update(product)
       .then(([result]) => {
         if (result.affectedRows === 0) {
           res.sendStatus(404);
@@ -58,11 +57,9 @@ class ProductController {
     // TODO validations (length, format...)
 
     models.product
-      .insert(product
-)
+      .insert(product)
       .then(([result]) => {
-        res.status(201).send({ ...product
-    , id: result.insertId });
+        res.status(201).send({ ...product, id: result.insertId });
       })
       .catch((err) => {
         console.error(err);

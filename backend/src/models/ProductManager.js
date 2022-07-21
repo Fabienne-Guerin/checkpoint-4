@@ -12,7 +12,7 @@ class ProductManager extends AbstractManager {
 
   update(product) {
     return this.connection.query(
-      `update ${ItemManager.table} set name = ? where id = ?`,
+      `update ${ProductManager.table} set name = ? where id = ?`,
       [product.name, product.id]
     );
   }
