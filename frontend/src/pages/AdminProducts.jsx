@@ -37,11 +37,11 @@ export default function AdminProducts() {
         </div>
       </div>
       <button
-          type="button"
-          className="p-2 bg-teal-900 min-w-1/3 lg:w-1/3 rounded-lg font-semibold mt-2 hover:bg-teal-500 text-white"
-        >
-          <Link to="/AdminForm">Ajouter un produit</Link>
-        </button>
+        type="button"
+        className="p-2 bg-teal-900 min-w-1/3 lg:w-1/3 rounded-lg font-semibold mt-2 hover:bg-teal-500 text-white"
+      >
+        <Link to="/AdminForm">Ajouter un produit</Link>
+      </button>
     </div>
   );
 }
