@@ -56,7 +56,6 @@ export default function ContactForm() {
         <button
           className="bg-teal-900 text-white text-center font-bold py-4 px-4 mb-6 rounded-full hover:bg-teal-500 mt-4 w-2/3 mx-auto"
           type="button"
-          // onClick={() => sendMessage()}
         >
           Enregistrer
         </button>
