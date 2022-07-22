@@ -6,11 +6,13 @@ export default function Contact() {
   return (
     <div>
       <h1 className="text-3xl text-center">Contact</h1>
-      <div className="flex flex-row">
-        <img className="w-48 h-auto m-6" src={map} alt="map" />
-        <div className="m-6 ">
+      <div className="flex flex-col-reverse  justify-center md:flex-row">
+        <div className="flex justify-center">
+          <img className="w-48 h-auto m-6" src={map} alt="map" />
+        </div>
+        <div className="m-6 flex flex-col">
           <h3 className="text-xl text-center pb-4">Informations utiles</h3>
-          <div className="text-sm">
+          <div className="flex flex-col text-center text-sm">
             <p>12 boulevard des chats, </p>
             <p>69002 Lyon, France</p>
             <p>04 44 04 44 04</p>
@@ -23,8 +25,8 @@ export default function Contact() {
         <h3 className="text-center ">
           Une question? Une remarque? N'hésitez pas à nous contacter!
         </h3>
-        <Link to="/Form">
-          <div className="bg-teal-900 text-white text-center font-bold py-4 px-4 mb-6 rounded-full hover:bg-teal-500 mt-4 w-2/3">
+        <Link to="/ContactForm">
+          <div className="bg-teal-900 text-white text-center font-bold py-4 px-4 mb-6 rounded-full hover:bg-teal-500 mt-4 w-2/3 mx-auto">
             <button type="button">Nous envoyer un message</button>
           </div>
         </Link>

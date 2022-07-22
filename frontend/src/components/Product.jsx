@@ -5,7 +5,7 @@ function Product({ name, description, price }) {
     <div>
       <h2>{name}</h2>
       <p className="text-xs">{description}</p>
-      <p className="text-end text-sm">{price}</p>
+      <p className="text-end text-sm">{price}€</p>
     </div>
   );
 }

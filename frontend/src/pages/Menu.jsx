@@ -22,8 +22,10 @@ export default function Menu() {
   return (
     <div>
       <h1>Voici notre menu</h1>
-      <div className="flex flex-row">
-        <img className="w-48 h-auto m-6" src={coldbrew} alt="iced coffee" />
+      <div className="flex flex-col md:flex-row">
+        <div className="flex justify-center">
+          <img className="w-48 h-auto m-6" src={coldbrew} alt="iced coffee" />
+        </div>
         <div className="m-6 ">
           <h3>Nos boissons</h3>
           <div>
@@ -44,7 +46,7 @@ export default function Menu() {
           </div>
         </div>
       </div>
-      <div className="flex flex-row">
+      <div className="flex flex-col-reverse md:flex-row">
         <div className="m-6 ">
           <h3>Nos patisseries</h3>
           <div>
@@ -64,10 +66,18 @@ export default function Menu() {
               )}
           </div>
         </div>
-        <img className="w-48 h-auto m-6" src={pastries} alt="pastries" />
+        <div className="flex justify-center">
+          <img className="w-48 h-auto m-6" src={pastries} alt="pastries" />
+        </div>
       </div>
-      <div className="flex flex-row">
-        <img className="w-48 h-auto m-6" src={sheers} alt="sharing a coffee" />
+      <div className="flex flex-col md:flex-row">
+        <div className="flex justify-center">
+          <img
+            className="w-48 h-auto m-6"
+            src={sheers}
+            alt="sharing a coffee"
+          />
+        </div>
         <div className="m-6 ">
           <h3>Pourquoi ne pas craquer pour notre formule?</h3>
           <p>

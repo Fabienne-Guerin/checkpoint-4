@@ -20,13 +20,13 @@ export default function Footer() {
             <Link to="Contact">Contact</Link>
           </p>
         </nav>
-        <p>Created by Sweets and Coffee © 2022</p>
       </div>
-      <div className="flex flex-row">
-        <img className="w-9 h-9" src={fb} alt="facebook" />
-        <div>
-          <img className="w-9 h-9" src={instagram} alt="instagram" />
+      <div className="flex flex-col justify-around">
+        <div className="flex flex-row">
+          <img className="w-9 h-9 mt-6" src={fb} alt="facebook" />
+          <img className="w-16 h-16" src={instagram} alt="instagram" />
         </div>
+        <p>Created by Sweets and Coffee © 2022</p>
       </div>
     </div>
   );
