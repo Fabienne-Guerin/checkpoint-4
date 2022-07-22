@@ -2,84 +2,93 @@ import React, { useState } from "react";
 import axios from "axios";
 
 export default function AdminForm() {
-  const [product, setProduct] = useState({
-    name: "",
-    description: "",
-    price: "",
-    category_id: "",
-  });
-  const [msg, setMsg] = useState("");
+  const [product, setProduct] = useState({});
+
+  const update = (event) => {
+    const changeDatas = { ...product };
+    changeDatas[event.target.name] = event.target.value;
+    setProduct({
+      ...product,
+      ...changeDatas,
+    });
+  };
 
   const createProduct = () => {
-    if (
-      product.name !== "" &&
-      product.description !== "" &&
-      product.price !== "" &&
-      product.category_id !== ""
-    ) {
-      axios
-        .post(`${import.meta.env.VITE_BACKEND_URL}/product`, product)
-        .catch((err) => console.error(err));
-    } else {
-      setMsg("Veuillez remplir tous les champs");
-    }
+    axios
+      .post(`${import.meta.env.VITE_BACKEND_URL}/createproduct`, {
+        name: product.name,
+        description: product.description,
+        price: product.price,
+        category_id: product.category_id,
+      })
+      .then((res) => setProduct(res.data))
+      .catch((err) => console.error(err));
   };
 
   return (
-    <div>
-      <h1 className="text-center">Ajouter un produit</h1>
+    <div className="bg-gray-300 flex flex-col justify-center text-center p-6">
+      <h1 className="font-logo bg-orange py-1 text-2xl font-bold">
+        Ajouter un produit
+      </h1>
       <form>
-        <div>
-          <div>
-            <h3>Ajout du nom du produit</h3>
-            <label>
-              nom du produit
+        <div className="p-4">
+          <div className="flex flex-col justify-center text-center space-y-2 p-2">
+            <label
+              htmlFor="product"
+              className="flex flex-col justify-center text-base"
+            >
+              <span className="font-semibold">Nom du produit</span>
               <input
                 type="text"
-                id="product_name"
+                id="name"
                 value={product.name}
-                name="product_name"
-                onChange={(event) => setProduct(event)}
+                name="name"
+                onChange={update}
+                className="flex w-[100%] mx-auto h-[2.8rem] mt-1 text-center text-teal-900"
               />
             </label>
-            <label>
-              description du produit
+            <label
+              htmlFor="description"
+              className="flex flex-col justify-center"
+            >
+              <span className="font-semibold">Description</span>
               <input
                 type="text"
-                id="product_description"
+                id="description"
                 value={product.description}
-                name="product_description"
-                onChange={(event) => setProduct(event)}
+                name="description"
+                onChange={update}
+                className="flex w-[100%] mx-auto h-[2.8rem] mt-1 text-center text-teal-900"
               />
             </label>
-            <label>
-              Prix
+            <label htmlFor="price" className="flex flex-col justify-center">
+              <span className="font-semibold">Prix</span>
               <input
                 type="text"
                 id="price"
                 value={product.price}
                 name="price"
-                onChange={(event) => setProduct(event)}
+                onChange={update}
+                className="flex w-[100%] mx-auto h-[2.8rem] mt-1 text-center text-teal-900"
               />
             </label>
-            <label>
-              catégorie (1 pour boisson, 2 pour patisserie)
+            <label
+              htmlFor="category_id"
+              className="flex flex-col justify-center"
+            >
+              <span className="font-semibold">Catégorie</span>
               <input
                 type="text"
-                id="category"
+                id="category_id"
                 value={product.category_id}
-                name="product_description"
-                onChange={(event) => setProduct(event)}
+                name="category_id"
+                onChange={update}
+                className="flex w-[100%] mx-auto h-[2.8rem] mt-1 text-center text-teal-900"
               />
             </label>
           </div>
-          <p>{msg}</p>
         </div>
-        <button
-          type="button"
-          onClick={createProduct}
-          className="btn btn-success"
-        >
+        <button type="button" onClick={() => createProduct()}>
           Enregistrer
         </button>
       </form>

@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Menu from "./pages/Menu";
 import AdminProducts from "./pages/AdminProducts";
 import AdminProduct from "./pages/AdminProduct";
-import AdminForm from "./pages/AdminForm";
+import AdminForm from "./pages/AdminForm"
 import Contact from "./pages/Contact";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -21,7 +21,7 @@ function App() {
           <Route path="/Contact" element={<Contact />} />
           <Route path="/AdminProducts" element={<AdminProducts />} />
           <Route path="/AdminProducts/:id" element={<AdminProduct />} />
-          <Route path="/AdminForm" element={<AdminForm />} />
+          <Route path="/createproduct" element={<AdminForm />} />
         </Routes>
         <Footer />
       </Router>

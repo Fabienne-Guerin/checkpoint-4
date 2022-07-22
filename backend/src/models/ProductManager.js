@@ -5,8 +5,8 @@ class ProductManager extends AbstractManager {
 
   insert(product) {
     return this.connection.query(
-      `insert into ${ProductManager.table} (name) values (?)`,
-      [product.name]
+      `insert into ${ProductManager.table} (name,description, price, category_id) values (?,?,?,?)`,
+      [product.name, product.description, product.price, product.category_id]
     );
   }
 
