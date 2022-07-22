@@ -1,14 +1,10 @@
 import React from "react";
-<<<<<<< HEAD
 import { Link } from "react-router-dom";
-import map from "@assets/map.png";
-=======
->>>>>>> 276bb4f869d97f4126c36e4952e29ee6ae008c1f
+import map from "@assets/map2.png";
 
 export default function Contact() {
   return (
     <div>
-<<<<<<< HEAD
       <h1 className="text-3xl text-center">Contact</h1>
       <div className="flex flex-row">
         <img className="w-48 h-auto m-6" src={map} alt="map" />
@@ -33,9 +29,6 @@ export default function Contact() {
           </div>
         </Link>
       </div>
-=======
-      <p>This is a contact page</p>
->>>>>>> 276bb4f869d97f4126c36e4952e29ee6ae008c1f
     </div>
   );
 }
